@@ -5,3 +5,13 @@ and there is an better solution named "WebClient"
 
 Solution #1
 Using webclient for introductions
+
+--------------------------------------
+ Service Discovery
+ Why:-
+ How:- via Netflix OSS :- Eureka
+
+ Steps:-
+ #1 Start up a Eureka Server
+ #2 Have microservices register (publish) using Eureka client
+ #3 Have microservices locate (consume) using Eureka client
