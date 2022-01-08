@@ -1,0 +1,7 @@
+Problem #1
+We used Rest templetes as a way to make call to other microservices
+but its are going to get depricated
+and there is an better solution named "WebClient"
+
+Solution #1
+Using webclient for introductions
