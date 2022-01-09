@@ -54,14 +54,14 @@ public class CatalogController {
         //--RestTemplate restTemplate = new RestTemplate();
 
         // get all rated movie IDs
-        UserRatings userRatings = restTemplate.getForObject("http://localhost:8083/ratings/user/" +userId, UserRatings.class);
+        UserRatings userRatings = restTemplate.getForObject("http://movie-rating-service:8083/ratings/user/" +userId, UserRatings.class);
         return userRatings.getUserRatings().stream().map(rating -> {
 
             //for each movie ID, call movie info service and get details
             //1--Problem # 1 the url is hardcoded, for any change in url the program will break say for port changes etc.
             // the line below is the single snippet which is making the call to API and unmarshalling the object
             // this can be done via webclient as well #-- is code for webclient which is reactive code
-            Movie movies = restTemplate.getForObject("http://localhost:8081/movies/" +rating.getMovieId(), Movie.class);
+            Movie movies = restTemplate.getForObject("http://movie-info-service:8082/movies/" +rating.getMovieId(), Movie.class);
 
             //Asynchronous way
             /* Movie movies = webClientBuilder.build()

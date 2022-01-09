@@ -8,6 +8,7 @@ Using webclient for introductions
 
 --------------------------------------
  Service Discovery
+ What
  Why:-
  How:- via Netflix OSS :- Eureka
 
@@ -15,3 +16,15 @@ Using webclient for introductions
  #1 Start up a Eureka Server
  #2 Have microservices register (publish) using Eureka client
  #3 Have microservices locate (consume) using Eureka client
+
+ --------------------------------------
+  Swagger
+  What
+  Why
+  How
+
+  Steps:-
+  #1 Add dependency
+  #2 Enable Swagger in ur code
+  #3 Configure it
+  #4 Adding details as annotations to APIs
